@@ -101,7 +101,9 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
+.link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .header__site-nav .link:hover,
 .header__site-nav .link:focus {
   color: var(--special-color);
@@ -167,6 +169,7 @@ ul {
   cursor: pointer;
   color: var(--color-light);
   border: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__hero-btn:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -283,12 +286,12 @@ ul {
   align-items: center;
   justify-content: center;
   color: var(--color-teachers-social);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .teachers-socials-icon {
   fill: currentColor;
 }
-
 .teachers-socials-link:hover,
 .teachers-socials-link:focus {
   background-color: var(--special-color);
@@ -327,10 +330,7 @@ ul {
   border: solid 1px var(--color-teachers-social);
   border-radius: 4px;
   fill: var(--color-teachers-social);
-}
-
-.teachers-socials-icon {
-  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-socials-link:hover,
 .clients-socials-link:focus {
@@ -365,6 +365,9 @@ ul {
   letter-spacing: 0.03em;
   cursor: pointer;
   padding: 6px 22px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn__nav:hover,
 .btn__nav:focus {
@@ -380,17 +383,16 @@ ul {
   margin-bottom: -30px;
   margin-right: -30px;
 }
-.main__information-project-item:hover {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+
 .main__information-project-item {
   width: calc(100% / 3 -30px);
   margin-bottom: 30px;
   margin-right: 30px;
-}
-.main__information-project-item {
   background: var(--color-light);
+}
+.main__information-project-item:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .main__information-project-item-border {
   border-left: 1px solid var(--color-border);
@@ -505,8 +507,8 @@ ul {
 }
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  min-width: 528px;
+  min-height: 581px;
   background-color: var(--color-light);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 1px 0px 1px rgba(0, 0, 0, 0.14),
     3px 0px 1px rgba(0, 0, 0, 0.12);
