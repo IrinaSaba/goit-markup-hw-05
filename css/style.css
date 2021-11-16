@@ -25,7 +25,9 @@ h5,
 h6 {
   margin: 0;
 }
-
+img {
+  display: block;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -61,10 +63,10 @@ ul {
 }
 /* ------------------HEADER----------------------- */
 .page-header {
+  display: flex;
+  justify-content: space-evenly;
   border-bottom: solid 1px var(--color-of-details);
   padding-top: 24px;
-  padding-bottom: 25px;
-  position: relative;
 }
 .page-header-container {
   display: flex;
@@ -76,6 +78,7 @@ ul {
 }
 .header__contact {
   display: flex;
+  align-items: center;
 }
 .header__site-nav .list:first-child {
   margin-left: 93px;
@@ -102,10 +105,18 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.header__site-nav .current:active::after {
+.current {
+  color: var(--special-color);
+}
+.header__site-nav-item {
+  position: relative;
+  padding-bottom: 25px;
+}
+.header__site-nav .current::after {
+  color: var(--special-color);
   content: '';
   height: 4px;
-  width: 48px;
+  width: 100%;
   background-color: var(--special-color);
   border-radius: 2px;
   display: block;
@@ -115,16 +126,8 @@ ul {
 .link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__site-nav .link:hover::after,
-.header__site-nav .link:focus::after {
-  content: '';
-  height: 4px;
-  width: 48px;
-  background-color: var(--special-color);
-  border-radius: 2px;
-  display: block;
-  position: absolute;
-  bottom: 0;
+.header__site-nav .link {
+  padding-bottom: 25px;
 }
 .header__site-nav .link:hover,
 .header__site-nav .link:focus {
@@ -136,7 +139,7 @@ ul {
 }
 .header__info-first {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .header__contact-icon {
   fill: currentColor;
@@ -215,7 +218,7 @@ ul {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  background-color: var(--color-details-info);
+  background-color: var(--color-background);
   width: 270px;
   height: 120px;
 }
@@ -350,6 +353,7 @@ ul {
 .main__information-clients.section {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: var(--color-details-info);
 }
 .main__information-clients.work {
   margin-bottom: 50px;
